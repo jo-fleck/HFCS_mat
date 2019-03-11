@@ -114,7 +114,7 @@ ID = cell2mat(rawNumericColumns(:, 1));
 HID = cell2mat(rawNumericColumns(:, 2));
 Survey = cell2mat(rawNumericColumns(:, 3));
 SA0010 = cell2mat(rawNumericColumns(:, 4));
-SA0100 = categorical(rawStringColumns(:, 1));
+SA0100 = string(rawStringColumns(:, 1));
 IM0100 = cell2mat(rawNumericColumns(:, 5));
 RA0010 = cell2mat(rawNumericColumns(:, 6));
 PA0100 = cell2mat(rawNumericColumns(:, 7));
@@ -143,7 +143,7 @@ PE0200 = cell2mat(rawNumericColumns(:, 29));
 FPE0200 = cell2mat(rawNumericColumns(:, 30));
 PE0300 = cell2mat(rawNumericColumns(:, 31));
 FPE0300 = cell2mat(rawNumericColumns(:, 32));
-PE0400 = categorical(rawStringColumns(:, 2));
+PE0400 = string(rawStringColumns(:, 2));
 FPE0400 = cell2mat(rawNumericColumns(:, 33));
 PE0500 = cell2mat(rawNumericColumns(:, 34));
 FPE0500 = cell2mat(rawNumericColumns(:, 35));
@@ -235,11 +235,10 @@ RA0300 = cell2mat(rawNumericColumns(:, 120));
 FRA0300 = cell2mat(rawNumericColumns(:, 121));
 RA0300_B = cell2mat(rawNumericColumns(:, 122));
 fRA0300_B = cell2mat(rawNumericColumns(:, 123));
-RA0400 = categorical(rawStringColumns(:, 3));
+RA0400 = string(rawStringColumns(:, 3));
 FRA0400 = cell2mat(rawNumericColumns(:, 124));
 RA0500 = cell2mat(rawNumericColumns(:, 125));
 FRA0500 = cell2mat(rawNumericColumns(:, 126));
-
 
 % Clear temporary variables
 clearvars endRow formatSpec fileID dataArray ans raw col numericData rawData row regexstr result numbers invalidThousandsSeparator thousandsRegExp rawNumericColumns rawStringColumns R catIdx idx;
